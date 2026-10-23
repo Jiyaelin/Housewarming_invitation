@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housewarming Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Ambient Golden Sparkle Canvas across entire invitation -->
+    <canvas id="sparkle-canvas"></canvas>
+
+    <!-- Opening Screen - Luxury Christian Invitation Card -->
+    <div id="letter-scene" class="letter-overlay">
+        <div class="invitation-card-container">
+            <div class="invitation-card" id="invitationCard">
+                
+                <div class="card-border-ornament">
+                    <span class="corner top-left"></span>
+                    <span class="corner top-right"></span>
+                    <span class="corner bottom-left"></span>
+                    <span class="corner bottom-right"></span>
+                </div>
+                
+                <div class="card-content">
+                    <!-- Ornate Glowing Christian Cross Emblem -->
+                    <div class="letter-emblem cross-emblem-container">
+                        <svg viewBox="0 0 100 120" class="emblem-svg cross-svg">
+                            <defs>
+                                <linearGradient id="crossGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FFF2C2"/>
+                                    <stop offset="35%" stop-color="#E5C365"/>
+                                    <stop offset="70%" stop-color="#B88A2E"/>
+                                    <stop offset="100%" stop-color="#FCEAB8"/>
+                                </linearGradient>
+                                <radialGradient id="haloGlow" cx="50%" cy="45%" r="50%">
+                                    <stop offset="0%" stop-color="rgba(245, 227, 179, 0.6)"/>
+                                    <stop offset="60%" stop-color="rgba(197, 160, 89, 0.2)"/>
+                                    <stop offset="100%" stop-color="rgba(197, 160, 89, 0)"/>
+                                </radialGradient>
+                            </defs>
+                            <!-- Holy Light Halo -->
+                            <circle cx="50" cy="45" r="34" fill="url(#haloGlow)"/>
+                            <!-- Sunburst Rays -->
+                            <g stroke="url(#crossGoldGrad)" stroke-width="0.8" opacity="0.65">
+                                <line x1="50" y1="12" x2="50" y2="78"/>
+                                <line x1="16" y1="45" x2="84" y2="45"/>
+                                <line x1="26" y1="21" x2="74" y2="69"/>
+                                <line x1="26" y1="69" x2="74" y2="21"/>
+                            </g>
+                            <!-- Ornate Budded Christian Cross -->
+                            <path d="M47 16 L53 16 L53 39 L76 39 L76 51 L53 51 L53 92 L47 92 L47 51 L24 51 L24 39 L47 39 Z" fill="url(#crossGoldGrad)"/>
+                            <!-- Trinity Budded Ends -->
+                            <circle cx="50" cy="14" r="3.5" fill="url(#crossGoldGrad)"/>
+                            <circle cx="22" cy="45" r="3.5" fill="url(#crossGoldGrad)"/>
+                            <circle cx="78" cy="45" r="3.5" fill="url(#crossGoldGrad)"/>
+                            <circle cx="50" cy="94" r="3.5" fill="url(#crossGoldGrad)"/>
+                            <!-- Center Diamond of Faith -->
+                            <polygon points="50,39 56,45 50,51 44,45" fill="#FFFFFF"/>
+                        </svg>
+                    </div>
+
+                    <h2 class="letter-top">You are warmly invited to our</h2>
+                    <h1 class="letter-names">Housewarming Ceremony</h1>
+                    
+                    <div class="ornate-divider">
+                        <span class="divider-line"></span>
+                        <span class="divider-gem">✝</span>
+                        <span class="divider-line"></span>
+                    </div>
+
+                    <div class="inviter-block">
+                        <p class="letter-sub">Invited by</p>
+                        <h3 class="letter-family">Thomas Philip & Family</h3>
+                    </div>
+
+                    <div class="button-wrapper">
+                        <button id="openInvitationBtn" class="btn-gold-action">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>Open Invitation</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Invitation Content -->
+    <div id="main-content">
+        
+        <!-- Floating Ambiance Elements -->
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+
+        <div class="folio-container">
+            <main class="invitation-folio">
+                
+                <!-- Ornate Gold Borders & Corners -->
+                <div class="folio-border-ornament">
+                    <span class="corner top-left"></span>
+                    <span class="corner top-right"></span>
+                    <span class="corner bottom-left"></span>
+                    <span class="corner bottom-right"></span>
+                </div>
+
+                <!-- Folio Header -->
+                <header class="folio-header">
+                    <div class="header-flourish">✝</div>
+                    <p class="header-scripture">“Through wisdom a house is built, and by understanding it is established.” <br><span>— Proverbs 24:3</span></p>
+                    <h3 class="subtitle">With Joyful Hearts & God’s Grace</h3>
+                    <h1 class="title">You Are Invited to Our Housewarming</h1>
+                </header>
+
+                <!-- Centerpiece House Photograph -->
+                <div class="hero-image-container" id="heroImageCard">
+                    <div class="hero-image-inner">
+                        <!-- The photograph of the house -->
+                        <img src="house.jpg" alt="Our New Home - Oonnukallil" class="hero-img">
+                        <div class="photo-plaque">
+                            <i class="fas fa-home"></i>
+                            <span>Oonnukallil (H) • Thekkumkal P.O, Ayroor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Host Names & Ceremony -->
+                <div class="folio-hosts">
+                    <h2 class="family-name">Thomas Philip & Family</h2>
+                    <p class="ceremony-text">Housewarming Ceremony</p>
+                </div>
+
+                <div class="ornate-divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-gem">✝</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <!-- Event Details Section (3-Card Grid) -->
+                <section class="details-section">
+                    <div class="detail-card">
+                        <div class="icon-bubble">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>Date</h4>
+                        <p class="detail-val">Saturday, Nov 7, 2026</p>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="icon-bubble">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Time</h4>
+                        <p class="detail-val">11:00 AM Onwards</p>
+                    </div>
+
+                    <div class="detail-card">
+                        <div class="icon-bubble">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Venue</h4>
+                        <p class="detail-val">Oonnukallil (H)</p>
+                        <span class="detail-sub">Thekkumkal P.O, Ayroor, Pathanamthitta - 689614</span>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=9P8X%2BWVF%2C+Thekkumkal-chirappuram+road%2C+Keralam+689614" target="_blank" class="detail-landmark" style="text-decoration: none;">
+                            <i class="fas fa-compass"></i> Get Directions
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Personal Message & Blessing -->
+                <section class="message-section">
+                    <div class="verse-quote-box">
+                        <span class="verse-cross">✝</span>
+                        <blockquote class="verse-highlight">
+                            “The Lord bless you and keep you;<br>
+                            The Lord make His face shine upon you,<br>
+                            And be gracious to you.”
+                        </blockquote>
+                        <div class="verse-citation">— Numbers 6:24–25 —</div>
+                    </div>
+                    <p class="personal-message">
+                        “A home is built with love, blessed with faith, and made special by the people we share it with. We would be overjoyed to have you with us as we celebrate this new beginning and dedicate our home to the Lord.”
+                    </p>
+                </section>
+
+                <!-- Countdown Section -->
+                <section class="countdown-section">
+                    <h2 class="countdown-title">Counting Down to Our Special Day</h2>
+                    <div class="countdown" id="countdown">
+                        <div class="time-box"><span id="days">00</span><p>Days</p></div>
+                        <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+                        <div class="time-box"><span id="minutes">00</span><p>Minutes</p></div>
+                        <div class="time-box"><span id="seconds">00</span><p>Seconds</p></div>
+                    </div>
+                </section>
+
+                <!-- Location Section -->
+                <section class="map-section">
+                    <h2 class="location-title">Find Us</h2>
+                    <p class="address-text">
+                        <strong>Oonnukallil (H)</strong><br>
+                        Thekkumkal P.O, Ayroor, Pathanamthitta - 689614<br>
+                        <span class="landmark-badge"><i class="fas fa-map-pin"></i> Thekkumkal-Chirappuram Road</span>
+                    </p>
+                    <div class="map-container">
+                        <!-- Embed Google Maps direct to exact house coordinates: 9.3667593, 76.749855 -->
+                        <iframe src="https://maps.google.com/maps?q=9.3667593,76.749855&hl=en&z=17&output=embed" width="100%" height="100%" style="border:0; width:100%; height:100%; display:block;" allowfullscreen="" loading="lazy"></iframe>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=9P8X%2BWVF%2C+Thekkumkal-chirappuram+road%2C+Keralam+689614" target="_blank" class="map-click-overlay" title="Click anywhere on map for Directions to Our Home">
+                            <span class="map-tap-hint">
+                                <i class="fas fa-directions"></i> Tap Map for Directions to Our Home
+                            </span>
+                        </a>
+                    </div>
+                    <div class="action-buttons-group">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=9P8X%2BWVF%2C+Thekkumkal-chirappuram+road%2C+Keralam+689614" target="_blank" class="btn-primary">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Housewarming+Ceremony+-+Thomas+Philip+%26+Family&dates=20261107T053000Z/20261107T103000Z&details=Housewarming+Ceremony+at+Oonnukallil+(H),+Thekkumkal+P.O,+Ayroor.+Google+Maps+Directions:+https://www.google.com/maps/dir/?api=1%26destination=9P8X%252BWVF%252C%2BThekkumkal-chirappuram%2Broad%252C%2BKeralam%2B689614&location=9P8X%2BWVF%2C+Thekkumkal-chirappuram+road%2C+Keralam+689614" target="_blank" class="btn-secondary">
+                            <i class="fas fa-calendar-plus"></i> Add to Calendar
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Footer Section -->
+                <footer class="footer-section">
+                    <p>“Your presence and prayers will make our housewarming celebration even more blessed and memorable.”</p>
+                    <h3>With love & prayers,<br>Thomas Philip & Family</h3>
+                </footer>
+
+            </main>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
